@@ -77,21 +77,16 @@ export const metadata: Metadata = {
         creator: "@nuqs_demo",
         site: "@nuqs_demo",
     },
-    viewport: {
-        width: "device-width",
-        initialScale: 1,
-        maximumScale: 1,
-    },
     verification: {
         google: "your-google-verification-code",
         yandex: "your-yandex-verification-code",
         yahoo: "your-yahoo-verification-code",
     },
     alternates: {
-        canonical: "https://nuqs-test.vercel.app",
+        canonical: "https://nuqs-demo.vercel.app",
         languages: {
-            "fr-FR": "https://nuqs-test.vercel.app/fr",
-            "en-US": "https://nuqs-test.vercel.app/en",
+            "fr-FR": "https://nuqs-demo.vercel.app/fr",
+            "en-US": "https://nuqs-demo.vercel.app/en",
         },
     },
     manifest: "/manifest.json",
@@ -127,8 +122,16 @@ export const metadata: Metadata = {
         email: false,
         url: false,
     },
-    metadataBase: new URL("https://nuqs-test.vercel.app"),
+    metadataBase: new URL("https://nuqs-demo.vercel.app"),
 };
+
+export function generateViewport() {
+    return {
+        width: "device-width",
+        initialScale: 1,
+        maximumScale: 1,
+    };
+}
 
 export default function RootLayout({
     children,

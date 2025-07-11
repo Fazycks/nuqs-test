@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://nuqs-test.vercel.app";
+    const baseUrl = "https://nuqs-demo.vercel.app";
     const currentDate = new Date();
 
     // Pages statiques
@@ -20,9 +20,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
     ];
 
-    // Générer les pages dynamiques des todos (1-200)
+    // Générer les pages dynamiques des todos (1-50) - réduit pour éviter les problèmes de build
     const todoPages: MetadataRoute.Sitemap = Array.from(
-        { length: 200 },
+        { length: 50 },
         (_, i) => ({
             url: `${baseUrl}/todos/${i + 1}`,
             lastModified: currentDate,
@@ -45,13 +45,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: "daily",
             priority: 0.8,
         },
-        // Pages par utilisateur (1-10)
-        ...Array.from({ length: 10 }, (_, i) => ({
-            url: `${baseUrl}/todos?userId=${i + 1}`,
-            lastModified: currentDate,
-            changeFrequency: "weekly" as const,
-            priority: 0.6,
-        })),
     ];
 
     return [...staticPages, ...todoPages, ...filterPages];

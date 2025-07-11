@@ -72,18 +72,7 @@ const nextConfig: NextConfig = {
 
     // Configuration experimentale pour de meilleures performances
     experimental: {
-        optimizeCss: true,
         optimizePackageImports: ["lucide-react"],
-    },
-
-    // Redirection de robots.txt et sitemap.xml
-    async rewrites() {
-        return [
-            {
-                source: "/robots.txt",
-                destination: "/api/robots",
-            },
-        ];
     },
 };
 
