@@ -1,0 +1,97 @@
+{
+    "name": "Nuqs Test - Gestion d'état URL",
+    "short_name": "Nuqs Test",
+    "description": "Démonstration de nuqs pour la gestion d'état dans l'URL avec Next.js",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "fr",
+    "categories": ["productivity", "utilities", "developer"],
+    "screenshots": [
+        {
+            "src": "/screenshot-wide.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Vue d'ensemble de l'application Nuqs Test"
+        },
+        {
+            "src": "/screenshot-narrow.png",
+            "sizes": "720x1280",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Vue mobile de l'application Nuqs Test"
+        }
+    ],
+    "icons": [
+        {
+            "src": "/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Voir tous les todos",
+            "short_name": "Todos",
+            "description": "Accéder directement à la liste des tâches",
+            "url": "/todos",
+            "icons": [
+                {
+                    "src": "/shortcut-todos.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "Todos terminés",
+            "short_name": "Terminés",
+            "description": "Voir les tâches terminées",
+            "url": "/todos?state=true",
+            "icons": [
+                {
+                    "src": "/shortcut-completed.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "Todos en cours",
+            "short_name": "En cours",
+            "description": "Voir les tâches en cours",
+            "url": "/todos?state=false",
+            "icons": [
+                {
+                    "src": "/shortcut-pending.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        }
+    ]
+}

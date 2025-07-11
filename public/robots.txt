@@ -1,0 +1,37 @@
+# Robots.txt pour Nuqs Test
+User-agent: *
+Allow: /
+
+# Pages principales
+Allow: /
+Allow: /todos
+Allow: /todos/*
+
+# Sitemap
+Sitemap: https://nuqs-test.vercel.app/sitemap.xml
+
+# Crawl-delay pour éviter la surcharge
+Crawl-delay: 1
+
+# Directives spécifiques pour les moteurs de recherche
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Bloquer les bots malveillants
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
